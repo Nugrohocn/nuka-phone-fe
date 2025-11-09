@@ -8,9 +8,9 @@ const Sidebar = () => {
     <aside className="flex h-screen w-64 flex-col justify-between shadow-2xl">
       {/* Header + Navigation  */}
       <div className="mt-12">
-        <div className="flex h-16 items-center gap-3 border-b border-slate-200 px-6">
+        <div className="flex h-16 items-center gap-3 px-6">
           <div className="p-4">
-            <img src={logo} alt="logo-nuka" className="h-10 w-auto" />
+            <img src={logo} alt="logo-nuka" className="h-45 w-auto" />
           </div>
         </div>
 
@@ -19,9 +19,10 @@ const Sidebar = () => {
             <Link
               key={index}
               to={nav.href}
-              className="flex items-center gap-3 rounded-lg px-3 py-2 font-medium text-gray-700 transition-all duration-200 hover:bg-indigo-100 hover:text-indigo-600"
+              className="flex items-center gap-3 px-3 py-2 text-sm font-medium text-gray-700 transition-all duration-100 hover:border-r hover:border-indigo-800 hover:bg-[#EFF6FF] hover:text-indigo-600"
             >
-              {nav.icon} {nav.title}
+              {nav.icon}
+              {nav.title}
             </Link>
           ))}
         </nav>

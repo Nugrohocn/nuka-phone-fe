@@ -5,6 +5,7 @@ import {
   ChartBarBig,
 } from "lucide-react";
 import Dashboard from "../pages/Dashboard";
+import Phone from "../pages/Phone";
 
 // Navigation
 const navigation = [
@@ -12,13 +13,13 @@ const navigation = [
     id: 1,
     title: "Dashboard",
     icon: <LayoutDashboard />,
-    href: <Dashboard />,
+    href: "/",
   },
   {
     id: 2,
     title: "Manage Phones",
     icon: <Smartphone />,
-    href: "",
+    href: "/phone",
   },
   {
     id: 3,
