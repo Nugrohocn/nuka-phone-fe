@@ -5,7 +5,7 @@ import {
   ChartBarBig,
 } from "lucide-react";
 import Dashboard from "../pages/Dashboard";
-import Phone from "../pages/Phone";
+import Phone from "../pages/phone/Index";
 
 // Navigation
 const navigation = [
@@ -25,13 +25,13 @@ const navigation = [
     id: 3,
     title: "Analytics",
     icon: <ChartBarBig />,
-    href: "",
+    href: "/analytic",
   },
   {
     id: 4,
     title: "Settings",
     icon: <Settings />,
-    href: "",
+    href: "/setting",
   },
 ];
 
