@@ -6,6 +6,7 @@ import Analytic from "../pages/Analytic";
 import Setting from "../pages/Setting";
 import AddPhone from "../pages/phone/AddPhone";
 import DetailPhone from "../pages/phone/DetailPhone";
+import EditPhone from "../pages/phone/EditPhone";
 
 const Index = () => (
   <Routes>
@@ -15,6 +16,7 @@ const Index = () => (
         <Route index element={<Phone />} />
         <Route path="add-phone" element={<AddPhone />} />
         <Route path=":id" element={<DetailPhone />} />
+        <Route path="edit/:id" element={<EditPhone />} />
       </Route>
       <Route path="analytic" element={<Analytic />} />
       <Route path="setting" element={<Setting />} />
