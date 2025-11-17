@@ -1,14 +1,16 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+
 const Header = () => {
   const location = useLocation();
 
-  // Pisahkan path berdasarkan "/"
+  const { user } = useSelector((state) => state.auth);
+
   const pathSegments = location.pathname.split("/").filter(Boolean);
   const currentPage = pathSegments[pathSegments.length - 1] || "dashboard";
 
-  // Mapping judul halaman
   const pageTitles = {
     dashboard: "Dashboard Overview",
     phone: "Manage Phone",
@@ -16,7 +18,6 @@ const Header = () => {
     settings: "Settings",
   };
 
-  // Fallback kalau belum ada di mapping
   const formatTitle = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
   const pageTitle = pageTitles[currentPage] || formatTitle(currentPage);
@@ -37,7 +38,10 @@ const Header = () => {
           className="h-10 w-10 rounded-full"
         />
         <div>
-          <h3 className="text-sm font-semibold text-gray-800">Nugroho</h3>
+          {}
+          <h3 className="text-sm font-semibold text-gray-800">
+            {user?.full_name || "Username"}
+          </h3>
         </div>
       </div>
     </div>

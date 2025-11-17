@@ -7,9 +7,11 @@ import Setting from "../pages/Setting";
 import AddPhone from "../pages/phone/AddPhone";
 import DetailPhone from "../pages/phone/DetailPhone";
 import EditPhone from "../pages/phone/EditPhone";
+import Login from "../pages/auth/Login";
 
 const Index = () => (
   <Routes>
+    <Route path="/login" element={<Login />} />
     <Route path="/" element={<DashboardLayout />}>
       <Route index element={<Dashboard />} />
       <Route path="phone">
